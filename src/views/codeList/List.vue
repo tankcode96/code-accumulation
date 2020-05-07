@@ -1,5 +1,17 @@
 <template>
-  <div class="view list-view"></div>
+  <div class="view list-view">
+    <ul>
+      <li>
+        <debounce></debounce>
+      </li>
+      <li>
+        <throttle></throttle>
+      </li>
+      <li>
+        <recursion></recursion>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
