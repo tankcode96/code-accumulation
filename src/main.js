@@ -5,7 +5,9 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import Mock from './mock'
 
+Vue.use(Mock)
 Vue.config.productionTip = false
 
 new Vue({
