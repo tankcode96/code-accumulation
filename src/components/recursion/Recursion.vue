@@ -17,7 +17,7 @@
         treeData: [] // 树结构数据
       }
     },
-    
+
     mounted() {
       this.init()
     },
@@ -45,12 +45,14 @@
           const key = `${preKey}-${i}`
           treeNodes.push({ key, title: key }) // 创建节点信息，并push到当前层级的树结构中
 
-          if (i < y) { // i < y 时，才给该节点创建子节点
+          if (i < y) {
+            // i < y 时，才给该节点创建子节点
             childKeys.push(key)
           }
         }
 
-        if (level === 0) { // 当前树分支已经走到叶子节点，可以终止当前树分支的创建
+        if (level === 0) {
+          // 当前树分支已经走到叶子节点，可以终止当前树分支的创建
           return
         }
 
@@ -69,14 +71,14 @@
        * @param deep 是否递归
        * @param deepKey 递归的key
        */
-      forEach (arr = [], callback, { parent = {}, parentIndexes = [], deep = true, deepKey = 'children' } = {}) {
+      forEach(arr = [], callback, { parent = {}, parentIndexes = [], deep = true, deepKey = 'children' } = {}) {
         for (const [index, item] of arr.entries()) {
           const indexes = [].concat(parentIndexes)
-          func.is(callback) && callback(item, index, parent, indexes)
+          callback instanceof Function && callback(item, index, parent, indexes)
 
           if (deep && item[deepKey] instanceof Array && item[deepKey].length > 0) {
             indexes.push(index)
-            forEach(item[deepKey], callback, {
+            this.forEach(item[deepKey], callback, {
               parent: item,
               parentIndexes: indexes,
               deep,
