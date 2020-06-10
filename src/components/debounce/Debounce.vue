@@ -36,6 +36,7 @@
 
     currentFocus = '' // 当前聚焦的输入框 without:非防抖 with:防抖
     consoleList = [] // 输出到页面的内容列表
+    debounceTimer = null // 防抖方法-定时器对象
 
     /**
      * 防抖方法
@@ -68,6 +69,32 @@
      */
     ajax(value) {
       this.consoleList.unshift(value)
+    }
+
+    /**
+     * 函数防抖
+     * @param func 函数
+     * @param wait 延迟执行毫秒数
+     * @param immediate true 表立即执行，false 表非立即执行
+     */
+    debounce (func, wait, immediate) {
+      let context = this
+      let args = arguments
+
+      if (this.debounceTimer) clearTimeout(this.debounceTimer)
+      if (immediate) {
+        const callNow = !debounceTimer
+        this.debounceTimer = setTimeout(() => {
+          this.debounceTimer = null
+        }, wait)
+        if (callNow) func.apply(context, args)
+      }
+      else {
+        this.debounceTimer = setTimeout(function(){
+          this.debounceTimer = null
+          func.apply(context, args)
+        }, wait)
+      }
     }
   }
   export default DebounceComp
