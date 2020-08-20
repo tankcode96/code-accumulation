@@ -41,13 +41,33 @@
     /**
      * 防抖方法
      */
-    debounce() {}
+    debounce() {
+      return new Promise((resolve, reject) => {
+        const a = 1
+        if (a === 1) {
+          resolve()
+        } else {
+          reject()
+        }
+      })
+    }
 
     /**
      * 处理页面事件：输入框聚焦
      */
     handleFocus(type) {
-      this.currentFocus = type
+      try {
+        this.currentFocus = type
+        this.debounce()
+          .then(() => {
+            console.log('resolve')
+          })
+          .catch(e => {
+            console.log('reject', e)
+          })
+      } catch (e) {
+        console.log('catch')
+      }
     }
 
     /**
