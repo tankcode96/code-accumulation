@@ -1486,10 +1486,15 @@
   dependencies:
     "@vue/cli-shared-utils" "^4.5.4"
 
-"@vue/cli-plugin-vuex@^4.5.4", "@vue/cli-plugin-vuex@~4.5.4":
+"@vue/cli-plugin-vuex@^4.5.4":
   version "4.5.4"
   resolved "https://registry.npm.taobao.org/@vue/cli-plugin-vuex/download/@vue/cli-plugin-vuex-4.5.4.tgz#6296e307388f61132117e0ac03188013652b0c55"
   integrity sha1-YpbjBziPYRMhF+CsAxiAE2UrDFU=
+
+"@vue/cli-plugin-vuex@~4.3.0":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-vuex/-/cli-plugin-vuex-4.3.1.tgz#2b73aff56f9e1be31018873d5ed2d59f155e7476"
+  integrity sha512-mukwOlhZGBJhkqO2b3wHFFHjK5aP00b1WUHdrOfLR7M18euhaTyb4kA5nwZwEOmU3EzZx6kHzSFCRy/XaMkLug==
 
 "@vue/cli-service@~4.5.4":
   version "4.5.4"
@@ -4732,9 +4737,9 @@ hex-color-regex@^1.1.0:
   integrity sha1-TAb8y0YC/iYCs8k9+C1+fb8aio4=
 
 highlight.js@^9.6.0:
-  version "9.18.1"
-  resolved "https://registry.npm.taobao.org/highlight.js/download/highlight.js-9.18.1.tgz#ed21aa001fe6252bb10a3d76d47573c6539fe13c"
-  integrity sha1-7SGqAB/mJSuxCj121HVzxlOf4Tw=
+  version "9.18.5"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.5.tgz#d18a359867f378c138d6819edfc2a8acd5f29825"
+  integrity sha512-a5bFyofd/BHCX52/8i8uJkjr9DYwXIPnM/plwI6W7ezItLGqzt7X2G2nXuYSfsIJdkwwj/g9DG1LkcGJI/dDoA==
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
